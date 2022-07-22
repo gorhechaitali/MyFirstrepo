@@ -1,0 +1,18 @@
+<template if:true={showpopUp}>
+        <div class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div class="slds-modal__content">
+                    <lightning-record-edit-form record-id={currentRecordId} object-api-name="Case"
+                        onsuccess={handleSuccess}>
+                        <lightning-input-field field-name="CaseNumber"></lightning-input-field>
+                        <lightning-input-field field-name="Comments"></lightning-input-field>
+                        <lightning-input-field field-name="Status"></lightning-input-field>
+                        <lightning-button variant="neutral" label="Cancel" onclick={closeAction}>
+                        </lightning-button>
+                        <lightning-button variant="Brand" label="Save">
+                        </lightning-button>
+                    </lightning-record-edit-form>
+                </div>
+            </div>
+        </div>
+    </template>
